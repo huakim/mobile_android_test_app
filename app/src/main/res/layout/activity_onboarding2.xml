@@ -53,7 +53,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="52dp"
         android:gravity="center"
-        android:text="Develop a habit of learning and make it a part of your daily routine"
+        android:text="@string/intro2"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

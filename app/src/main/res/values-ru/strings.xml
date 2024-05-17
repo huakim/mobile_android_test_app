@@ -9,6 +9,9 @@
     <string name="check">Проверить</string>
     <string name="success">Успех</string>
     <string name="failure">Неудача</string>
+    <string name="intro3">Используйте различные стили обучения для усвоения и запоминания информации</string>
+    <string name="intro2">Выработайте привычку учиться и сделайте это частью своей повседневной жизни</string>
+    <string name="intro1">Благодаря разговорному обучению вы научитесь говорить с первого урока</string>
     <string name="change_image">Смени фотографию</string>
     <string name="right">Верно!</string>
     <string name="hello">Привет!</string>

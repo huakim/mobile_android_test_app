@@ -53,7 +53,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="52dp"
         android:gravity="center"
-        android:text="Using a variety of learning styles to learn and retain"
+        android:text="@string/intro3"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
