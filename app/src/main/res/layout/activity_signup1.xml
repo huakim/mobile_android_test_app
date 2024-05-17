@@ -26,7 +26,7 @@
         android:layout_marginBottom="124dp"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/login"
-        android:textColor="#5B7BFE"
+        android:textColor="@color/LightBlueColor"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

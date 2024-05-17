@@ -62,7 +62,7 @@
         android:id="@+id/topAppBarLogin"
         android:layout_width="413dp"
         android:layout_height="222dp"
-        android:background="#410FA3"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
