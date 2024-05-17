@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Language_app</string>
     <string name="signup">Зарегестрироваться</string>
+    <string name="save">Сохранить</string>
     <string name="who_is_image">Кто на картинке?</string>
     <string name="monkey">обезьяна</string>
     <string name="hen">курица</string>

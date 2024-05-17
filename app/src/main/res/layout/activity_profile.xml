@@ -15,12 +15,25 @@
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/whats_your_language"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/choose_button3"
+        app:layout_constraintBottom_toTopOf="@+id/changeImageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/choose_button3"
+        android:id="@+id/saveButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_rounded_blue"
+        android:fontFamily="@font/fredoka_condensed_bold"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/changeLangButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changeImageButton"
         android:layout_width="313dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"

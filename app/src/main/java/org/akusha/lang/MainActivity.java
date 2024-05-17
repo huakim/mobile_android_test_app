@@ -3,6 +3,7 @@ package org.akusha.lang;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.buttonWordPractice).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WordPractice.class)));
 
+        android.net.Uri image = Profile.imageUri;
+        if (image != null){
+            ((ImageView) findViewById(R.id.imageAvatar)).setImageURI(image);
+        }
 
         findViewById(R.id.imageAvatar).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Profile.class)));
     }
