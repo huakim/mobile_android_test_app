@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+
     tools:context=".GuessError">
 
     <Button
@@ -15,7 +17,7 @@
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/next"
 
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -29,7 +31,7 @@
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/try_again"
 
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -39,6 +41,7 @@
         android:layout_width="208dp"
         android:layout_height="30dp"
         android:layout_marginTop="36dp"
+        android:textColor="@color/black"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/wrong_raise"
         android:textSize="20dp"
@@ -56,6 +59,7 @@
         android:layout_marginTop="64dp"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text=""
+        android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.679"
@@ -68,9 +72,7 @@
         android:id="@+id/topAppBarLogin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#8748d6"
-
-
+        android:background="@color/d6185d"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +86,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/fredoka_condensed_bold"
             android:text="@string/failure"
-            android:textColor="@color/white"
+            android:textColor="@color/whiteone"
             android:textSize="20sp" />
 
         <Button

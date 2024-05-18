@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".Login">
 
@@ -25,7 +26,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/fredoka_condensed_bold"
             android:text="@string/login"
-            android:textColor="@color/white"
+            android:textColor="@color/whiteone"
             android:textSize="20sp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -99,6 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="514dp"
         android:fontFamily="@font/fredoka_condensed_bold"
+        android:textColor="@color/black"
         android:text="@string/loginTextView1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="476dp"
         android:text="@string/firstName"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.118"
@@ -133,6 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="396dp"
         android:text="@string/loginPass"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
@@ -146,7 +150,7 @@
         android:background="@drawable/button_rounded_blue"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/login"
-        android:textColor="@color/white"
+        android:textColor="@color/whiteone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -159,7 +163,7 @@
         android:background="@drawable/button_rounded_blue"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/signup"
-        android:textColor="@color/white"
+        android:textColor="@color/whiteone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

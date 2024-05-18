@@ -3,7 +3,6 @@
     <style name="Base.Theme.Language_app" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">#5B7BFE</item>
     </style>
 
     <style name="Theme.Language_app" parent="Base.Theme.Language_app" />

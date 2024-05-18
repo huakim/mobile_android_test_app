@@ -37,7 +37,7 @@ public class WordPractice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_practice);
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.ensureCapacity(eng.length);
         for (int i=0; i<eng.length; i++) list.add(i);
         Collections.shuffle(list);

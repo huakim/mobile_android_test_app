@@ -1,22 +1,20 @@
 package org.akusha.lang;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
+
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.security.Permission;
 
 public class Profile extends AppCompatActivity {
 
     private static final int REQUEST_CODE_PICK_IMAGE = 123;
-    private static final int PERMISSION_REQUEST_CODE = 456;
+   // private static final int PERMISSION_REQUEST_CODE = 456;
 
     private void pickImage() {
         // Check if the app has permission to access external storage
@@ -47,6 +45,17 @@ public class Profile extends AppCompatActivity {
         String str = text.getText().toString();
         text.setText(Login.value+", "+str);
 
+        Button themebutton = this.<Button>findViewById(R.id.themeButton);
+        themebutton.setText(SplashScreen.getDark()? R.string.light: R.string.dark);
+
+        themebutton.setOnClickListener(
+                v -> {
+                    boolean dark = ! SplashScreen.getDark();
+                    themebutton.setText(dark ? R.string.light : R.string.dark);
+                    SplashScreen.setDark(dark);
+                    SplashScreen.setDarkContext(this, dark);
+                }
+        );
 
         android.net.Uri image = Profile.imageUri;
         if (image != null){
@@ -54,17 +63,27 @@ public class Profile extends AppCompatActivity {
         }
 
         findViewById(R.id.saveButton).setOnClickListener(
-                v -> {
-                    startActivity(new Intent(Profile.this, MainActivity.class));
-                }
+                v ->
+                    startActivity(new Intent(Profile.this, MainActivity.class))
+
+        );
+
+        findViewById(R.id.choose_button5).setOnClickListener(
+                v ->
+                    startActivity(new Intent(Profile.this, Login.class))
+
         );
 
         findViewById(R.id.changeImageButton).setOnClickListener(
-                v -> {
-                    pickImage();
-                }
+                v ->
+                    pickImage()
+
         );
 
-        findViewById(R.id.changeLangButton).setOnClickListener(v -> startActivity(new Intent(Profile.this, LanguageSelect.class)));
+        findViewById(R.id.changeLangButton).setOnClickListener(
+                v ->
+                    startActivity(new Intent(Profile.this, LanguageSelect.class))
+
+        );
     }
 }

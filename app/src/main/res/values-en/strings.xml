@@ -2,6 +2,8 @@
     <string name="app_name">Language_app</string>
     <string name="signup">Sign Up</string>
     <string name="save">Save</string>
+    <string name="dark">dark</string>
+    <string name="light">light</string>
     <string name="who_is_image">Who is on the image?</string>
     <string name="monkey">monkey</string>
     <string name="hen">hen</string>

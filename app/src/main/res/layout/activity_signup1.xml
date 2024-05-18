@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".Signup_1">
 
@@ -11,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="124dp"
+        android:textColor="@color/black"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="Already you member? "
         android:textSize="15sp"
@@ -36,6 +38,7 @@
     <TextView
         android:id="@+id/textViewFirstName"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:text="@string/firstName"
@@ -62,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="49dp"
+        android:textColor="@color/black"
         android:text="@string/lastName"
         app:layout_constraintBottom_toBottomOf="@+id/editTextLastName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +89,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:text="@string/loginEmail"
@@ -127,7 +132,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/fredoka_condensed_bold"
             android:text="@string/signup"
-            android:textColor="@color/white"
+            android:textColor="@color/whiteone"
             android:textSize="20sp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -151,6 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:textColor="@color/black"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="Create an Account"
         android:textSize="25sp"
@@ -167,7 +173,7 @@
         android:background="@drawable/button_rounded_blue"
         android:fontFamily="@font/fredoka_condensed_bold"
         android:text="@string/Continue"
-        android:textColor="@color/white"
+        android:textColor="@color/whiteone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

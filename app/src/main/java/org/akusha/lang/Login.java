@@ -17,8 +17,7 @@ public class Login extends AppCompatActivity {
         findViewById(R.id.textViewSignup).setOnClickListener(v -> startActivity(new Intent(Login.this, Signup_1.class)));
 
         findViewById(R.id.choose_button).setOnClickListener((View.OnClickListener) v -> {
-            String value = ((EditText)findViewById(R.id.editTextEmail)).getText().toString();
-            Login.value = value;
+            Login.value = ((EditText)findViewById(R.id.editTextEmail)).getText().toString();
             startActivity(new Intent(Login.this, MainActivity.class));
         });
 
