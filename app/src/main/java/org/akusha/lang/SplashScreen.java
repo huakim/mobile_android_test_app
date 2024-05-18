@@ -7,13 +7,23 @@ import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.content.res.Configuration;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Map;
+
 public class SplashScreen extends AppCompatActivity {
-    public int color = R.string.light;
+    public static boolean dark;
+    public static File filesdir;
 
     public static SharedPreferences sharedPreferences;
 
@@ -31,32 +41,66 @@ public class SplashScreen extends AppCompatActivity {
     }
 
     public static void setDark(boolean enable){
-        SharedPreferences.Editor edit = sharedPreferences.edit();
-        edit.putBoolean("language_app_theme_settings", enable);
-        edit.apply();
+// Create the file in the internal directory
+        SplashScreen.dark = enable;
+        File configFile = new File(filesdir, "dark.txt");
+        try {
+            // Create a new file or overwrite the existing file
+            FileOutputStream fos = new FileOutputStream(configFile);
+
+            // Write the single byte to the file
+            fos.write(enable ? 1 : 0);
+
+            // Flush and close the FileOutputStream
+            fos.flush();
+            fos.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
     }
 
     public static boolean getDark(){
-        return sharedPreferences.getBoolean("language_app_theme_settings", false);
+        return SplashScreen.dark;
     }
 
     public static void setDarkContext(AppCompatActivity context, boolean value){
+
+        Locale locale = context.getResources().getConfiguration().getLocales().get(0);
+
         AppCompatDelegate.setDefaultNightMode(
                 value ? AppCompatDelegate.MODE_NIGHT_YES:
                 AppCompatDelegate.MODE_NIGHT_NO);
         context.recreate();
+
+        Resources resources = context.getResources();
+        Configuration config = resources.getConfiguration();
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
     public void init(){
+        FileInputStream fis = null;
+        try {
+            File file = new File(SplashScreen.filesdir =
+                    getFilesDir(), "dark.txt");
+            if (!file.exists()) file.createNewFile();
 
-        sharedPreferences = getSharedPreferences("language_app_theme_settings", Context.MODE_PRIVATE);
+            fis = new FileInputStream(file);
 
-        boolean systemdark = isDarkModeEnabled(this);
-        boolean dark = sharedPreferences.getBoolean("night", systemdark);
-        if (systemdark != dark){
-            setDarkContext(this, dark);
+            boolean systemdark = isDarkModeEnabled(this);
+
+            // Read a single byte from the file
+            boolean dark = fis.read() == 1;
+            if (systemdark != dark){
+                setDarkContext(this, dark);
+            }
+            setDark(dark);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        setDark(dark);
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
