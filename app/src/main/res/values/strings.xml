@@ -45,4 +45,7 @@
     <string name="word_practice">Word practice</string>
     <string name="listening">Listening</string>
     <string name="passwordforgot">Forgot Password</string>
+    <string name="title_intro3">The lessons you need to learn</string>
+    <string name="title_intro2">Take your time to learn</string>
+    <string name="title_intro1">Confidence in your words</string>
 </resources>

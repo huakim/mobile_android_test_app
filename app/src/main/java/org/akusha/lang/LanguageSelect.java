@@ -39,6 +39,7 @@ public class LanguageSelect extends AppCompatActivity {
                 android.content.res.Configuration config = resources.getConfiguration();
                 config.setLocale(locale);
                 resources.updateConfiguration(config, resources.getDisplayMetrics());
+                SplashScreen.setLang(LanguageSelect.this, locale);
             }
         });
 

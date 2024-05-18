@@ -45,4 +45,7 @@
     <string name="try_again">Ещё?</string>
     <string name="word_practice">Словарная практика</string>
     <string name="listening">Слушаю</string>
+    <string name="title_intro3">Уроки, которые ты должен учить</string>
+    <string name="title_intro2">Найди время для обучения</string>
+    <string name="title_intro1">Проверь свои знания</string>
 </resources>
